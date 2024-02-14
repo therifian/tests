@@ -1,0 +1,19 @@
+<build>
+  <plugins>
+    <plugin>
+      <groupId>io.gatling</groupId>
+      <artifactId>gatling-maven-plugin</artifactId>
+      <version>${gatling.version}</version>
+      <executions>
+        <execution>
+          <goals>
+            <goal>execute</goal>
+          </goals>
+          <configuration>
+            <simulationClass>com.package.RatesSimulationSuiteTest</simulationClass>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+</build>
