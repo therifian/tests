@@ -12,7 +12,6 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-
       <!-- Basic Load Test -->
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Basic Load Test" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -26,23 +25,10 @@
         <stringProp name="ThreadGroup.duration">300</stringProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Basic Request" enabled="true">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain">localhost</stringProp>
-          <stringProp name="HTTPSampler.port">9082</stringProp>
-          <stringProp name="HTTPSampler.protocol">http</stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/aggregation</stringProp>
-          <stringProp name="HTTPSampler.method">GET</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <boolProp name="HTTPSampler.monitoring">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-        </HTTPSamplerProxy>
+        <!-- Using HTTP Sampler from external file -->
+        <IncludeController guiclass="IncludeController" testclass="IncludeController" testname="Include Controller" enabled="true">
+          <stringProp name="IncludeController.includePath">host-and-ports.jmx</stringProp>
+        </IncludeController>
         <hashTree/>
       </hashTree>
 
@@ -59,23 +45,10 @@
         <stringProp name="ThreadGroup.duration">60</stringProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Ramp-up Request" enabled="true">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain">localhost</stringProp>
-          <stringProp name="HTTPSampler.port">9082</stringProp>
-          <stringProp name="HTTPSampler.protocol">http</stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/aggregation</stringProp>
-          <stringProp name="HTTPSampler.method">GET</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <boolProp name="HTTPSampler.monitoring">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-        </HTTPSamplerProxy>
+        <!-- Using HTTP Sampler from external file -->
+        <IncludeController guiclass="IncludeController" testclass="IncludeController" testname="Include Controller" enabled="true">
+          <stringProp name="IncludeController.includePath">host-and-ports.jmx</stringProp>
+        </IncludeController>
         <hashTree/>
       </hashTree>
 
@@ -92,23 +65,10 @@
         <stringProp name="ThreadGroup.duration">60</stringProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Stress Request" enabled="true">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain">localhost</stringProp>
-          <stringProp name="HTTPSampler.port">9082</stringProp>
-          <stringProp name="HTTPSampler.protocol">http</stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/aggregation</stringProp>
-          <stringProp name="HTTPSampler.method">GET</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <boolProp name="HTTPSampler.monitoring">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-        </HTTPSamplerProxy>
+        <!-- Using HTTP Sampler from external file -->
+        <IncludeController guiclass="IncludeController" testclass="IncludeController" testname="Include Controller" enabled="true">
+          <stringProp name="IncludeController.includePath">host-and-ports.jmx</stringProp>
+        </IncludeController>
         <hashTree/>
       </hashTree>
 
@@ -125,23 +85,10 @@
         <stringProp name="ThreadGroup.duration">300</stringProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Duration Request" enabled="true">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain">localhost</stringProp>
-          <stringProp name="HTTPSampler.port">9082</stringProp>
-          <stringProp name="HTTPSampler.protocol">http</stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/aggregation</stringProp>
-          <stringProp name="HTTPSampler.method">GET</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <boolProp name="HTTPSampler.monitoring">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-        </HTTPSamplerProxy>
+        <!-- Using HTTP Sampler from external file -->
+        <IncludeController guiclass="IncludeController" testclass="IncludeController" testname="Include Controller" enabled="true">
+          <stringProp name="IncludeController.includePath">host-and-ports.jmx</stringProp>
+        </IncludeController>
         <hashTree/>
       </hashTree>
 
@@ -158,34 +105,202 @@
         <stringProp name="ThreadGroup.duration">60</stringProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Constant Throughput Request" enabled="true">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
+
+
+      <!-- Concurrency Test -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Concurrency Test" enabled="true">
+          <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+          <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+              <boolProp name="LoopController.continue_forever">false</boolProp>
+              <stringProp name="LoopController.loops">1</stringProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">localhost</stringProp>
-          <stringProp name="HTTPSampler.port">9082</stringProp>
-          <stringProp name="HTTPSampler.protocol">http</stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/aggregation</stringProp>
-          <stringProp name="HTTPSampler.method">GET</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <boolProp name="HTTPSampler.monitoring">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="true">
-            <intProp name="calcMode">1</intProp>
-            <doubleProp>
-              <name>throughput</name>
-              <value>10.0</value>
-              <savedValue>0.0</savedValue>
-            </doubleProp>
-          </ConstantThroughputTimer>
+          <stringProp name="ThreadGroup.num_threads">50</stringProp>
+          <stringProp name="ThreadGroup.ramp_time">60</stringProp>
+          <boolProp name="ThreadGroup.scheduler">true</boolProp>
+          <stringProp name="ThreadGroup.duration">300</stringProp>
+      </ThreadGroup>
+      <hashTree>
+          <!-- Using HTTP Sampler from external file -->
+          <IncludeController guiclass="IncludeController" testclass="IncludeController" testname="Include Controller" enabled="true">
+              <stringProp name="IncludeController.includePath">host-and-ports.jmx</stringProp>
+          </IncludeController>
           <hashTree/>
-        </hashTree>
+      </hashTree>
+
+      <!-- Endurance or Soak Test -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Endurance or Soak Test" enabled="true">
+          <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+          <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="LoopController.loops">-1</stringProp>
+          </elementProp>
+          <stringProp name="ThreadGroup.num_threads">20</stringProp>
+          <stringProp name="ThreadGroup.ramp_time">30</stringProp>
+          <boolProp name="ThreadGroup.scheduler">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+          <!-- Using HTTP Sampler from external file -->
+          <IncludeController guiclass="IncludeController" testclass="IncludeController" testname="Include Controller" enabled="true">
+              <stringProp name="IncludeController.includePath">host-and-ports.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+      </hashTree>
+
+      <!-- Spike Test -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Spike Test" enabled="true">
+          <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+          <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+              <boolProp name="LoopController.continue_forever">false</boolProp>
+              <stringProp name="LoopController.loops">1</stringProp>
+          </elementProp>
+          <stringProp name="ThreadGroup.num_threads">100</stringProp>
+          <stringProp name="ThreadGroup.ramp_time">5</stringProp>
+          <boolProp name="ThreadGroup.scheduler">true</boolProp>
+          <stringProp name="ThreadGroup.duration">20</stringProp>
+      </ThreadGroup>
+      <hashTree>
+          <!-- Using HTTP Sampler from external file -->
+          <IncludeController guiclass="IncludeController" testclass="IncludeController" testname="Include Controller" enabled="true">
+              <stringProp name="IncludeController.includePath">host-and-ports.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+      </hashTree>
+
+      <!-- Failover and Recovery Test -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Failover and Recovery Test" enabled="true">
+          <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+          <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+              <boolProp name="LoopController.continue_forever">false</boolProp>
+              <stringProp name="LoopController.loops">1</stringProp>
+          </elementProp>
+          <stringProp name="ThreadGroup.num_threads">10</stringProp>
+          <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+          <boolProp name="ThreadGroup.scheduler">true</boolProp>
+          <stringProp name="ThreadGroup.duration">30</stringProp>
+      </ThreadGroup>
+      <hashTree>
+          <!-- Using HTTP Sampler from external file -->
+          <IncludeController guiclass="IncludeController" testclass="IncludeController" testname="Include Controller" enabled="true">
+              <stringProp name="IncludeController.includePath">host-and-ports.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+      </hashTree>
+
+      <!-- Scalability Test -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Scalability Test" enabled="true">
+          <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+          <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+              <boolProp name="LoopController.continue_forever">false</boolProp>
+              <stringProp name="LoopController.loops">1</stringProp>
+          </elementProp>
+          <stringProp name="ThreadGroup.num_threads">50</stringProp>
+          <stringProp name="ThreadGroup.ramp_time">30</stringProp>
+          <boolProp name="ThreadGroup.scheduler">true</boolProp>
+          <stringProp name="ThreadGroup.duration">120</stringProp>
+      </ThreadGroup>
+      <hashTree>
+          <!-- Using HTTP Sampler from external file -->
+          <IncludeController guiclass="IncludeController" testclass="IncludeController" testname="Include Controller" enabled="true">
+              <stringProp name="IncludeController.includePath">host-and-ports.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+      </hashTree>
+
+      <!-- Isolation Test -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Isolation Test" enabled="true">
+          <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+          <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+              <boolProp name="LoopController.continue_forever">false</boolProp>
+              <stringProp name="LoopController.loops">1</stringProp>
+          </elementProp>
+          <stringProp name="ThreadGroup.num_threads">5</stringProp>
+          <stringProp name="ThreadGroup.ramp_time">5</stringProp>
+          <boolProp name="ThreadGroup.scheduler">true</boolProp>
+          <stringProp name="ThreadGroup.duration">10</stringProp>
+      </ThreadGroup>
+      <hashTree>
+          <!-- Using HTTP Sampler from external file -->
+          <IncludeController guiclass="IncludeController" testclass="IncludeController" testname="Include Controller" enabled="true">
+              <stringProp name="IncludeController.includePath">host-and-ports.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+      </hashTree>
+
+      <!-- Network Latency Test -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Network Latency Test" enabled="true">
+          <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+          <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+              <boolProp name="LoopController.continue_forever">false</boolProp>
+              <stringProp name="LoopController.loops">1</stringProp>
+          </elementProp>
+          <stringProp name="ThreadGroup.num_threads">10</stringProp>
+          <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+          <boolProp name="ThreadGroup.scheduler">true</boolProp>
+          <stringProp name="ThreadGroup.duration">30</stringProp>
+      </ThreadGroup>
+      <hashTree>
+          <!-- Using HTTP Sampler from external file -->
+          <IncludeController guiclass="IncludeController" testclass="IncludeController" testname="Include Controller" enabled="true">
+              <stringProp name="IncludeController.includePath">host-and-ports.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+      </hashTree>
+
+      <!-- Database Performance Test -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Database Performance Test" enabled="true">
+          <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+          <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+              <boolProp name="LoopController.continue_forever">false</boolProp>
+              <stringProp name="LoopController.loops">1</stringProp>
+          </elementProp>
+          <stringProp name="ThreadGroup.num_threads">20</stringProp>
+          <stringProp name="ThreadGroup.ramp_time">20</stringProp>
+          <boolProp name="ThreadGroup.scheduler">true</boolProp>
+          <stringProp name="ThreadGroup.duration">60</stringProp>
+      </ThreadGroup>
+      <hashTree>
+          <!-- Using HTTP Sampler from external file -->
+          <IncludeController guiclass="IncludeController" testclass="IncludeController" testname="Include Controller" enabled="true">
+              <stringProp name="IncludeController.includePath">host-and-ports.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+      </hashTree>
+
+      <!-- Security and Load Test -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Security and Load Test" enabled="true">
+          <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+          <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+              <boolProp name="LoopController.continue_forever">false</boolProp>
+              <stringProp name="LoopController.loops">1</stringProp>
+          </elementProp>
+          <stringProp name="ThreadGroup.num_threads">30</stringProp>
+          <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+          <boolProp name="ThreadGroup.scheduler">true</boolProp>
+          <stringProp name="ThreadGroup.duration">45</stringProp>
+      </ThreadGroup>
+      <hashTree>
+          <!-- Using HTTP Sampler from external file -->
+          <IncludeController guiclass="IncludeController" testclass="IncludeController" testname="Include Controller" enabled="true">
+              <stringProp name="IncludeController.includePath">host-and-ports.jmx</stringProp>
+          </IncludeController>
+          <hashTree/>
+      </hashTree>
+
+
+        <!-- Using HTTP Sampler from external file -->
+        <IncludeController guiclass="IncludeController" testclass="IncludeController" testname="Include Controller" enabled="true">
+          <stringProp name="IncludeController.includePath">host-and-ports.jmx</stringProp>
+        </IncludeController>
+        <!-- Using Constant Throughput Timer -->
+        <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="true">
+          <intProp name="calcMode">1</intProp>
+          <doubleProp>
+            <name>throughput</name>
+            <value>10.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+        </ConstantThroughputTimer>
+        <hashTree/>
       </hashTree>
     </hashTree>
   </hashTree>
